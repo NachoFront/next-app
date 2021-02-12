@@ -1,0 +1,17 @@
+# Ignore artifacts:
+/.next
+/build
+/coverage
+/cypress
+/.storybook
+/stories
+/styles
+
+# root files
+.prettierrc
+cypress.json
+next-env.d.ts
+package.json
+README.md
+tsconfig.json
+tslint.json

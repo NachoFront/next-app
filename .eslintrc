@@ -1,0 +1,29 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "strict": "error",
+    "max-lines": ["error", { "max": 120 }],
+    "arrow-parens": ["error", "always"],
+    "eqeqeq": "warn",
+    "curly": "warn",
+    "quotes": ["error", "single"],
+    "complexity": ["error", { "max": 5 }]
+  }
+}
