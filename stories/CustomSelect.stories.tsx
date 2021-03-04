@@ -24,6 +24,8 @@ const optionList = [
 const props = {
   optionList: optionList,
   defaultText:'Seleciona una opción',
+  colorArrow:'black',
+  colorBackgroundList:'white',
 }
 
 const Template: Story<ComponentProps<typeof CustomSelect>> = () => (

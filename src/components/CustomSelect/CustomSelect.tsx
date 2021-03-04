@@ -2,12 +2,15 @@ import React, { FC, useEffect, useState } from 'react';
 import { SelectContainer, List, DefaultText } from './style';
 
 interface CustomSelectProps {
-  optionList?: { id: string; name: string }[];
+  optionList: { id: string; name: string }[];
   defaultText?: string;
+  colorArrow?:string;
+  colorBackgroundList?:string;
+
 }
 
 const CustomSelect: FC<CustomSelectProps> = (props) => {
-  const { optionList, defaultText } = props;
+  const { optionList, defaultText,colorArrow,colorBackgroundList } = props;
   const [showOptionList, setShowOptionsList] = useState(false);
   const [defaultSelectText, setDefaultSelectText] = useState(defaultText ? defaultText : 'Select');
 
@@ -28,10 +31,10 @@ const CustomSelect: FC<CustomSelectProps> = (props) => {
 
   return (
     <SelectContainer onMouseLeave={() => setShowOptionsList(false)}>
-      <DefaultText onClick={handleListDisplay}>{defaultSelectText}</DefaultText>
+      <DefaultText colorArrow={colorArrow}  onClick={handleListDisplay}>{defaultSelectText}</DefaultText>
 
       {showOptionList && (
-        <List>
+        <List bgColor={colorBackgroundList}>
           {optionList &&
             optionList.map((option) => {
               return (
